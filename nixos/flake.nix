@@ -24,7 +24,7 @@
     };
   };
 
-  outputs = { self, nixpkgs,home-manager, ... }@inputs:
+  outputs = { self, nixpkgs,nixpkgs-unstable,home-manager, ... }@inputs:
     let
 
     inherit(self) outputs;
@@ -53,10 +53,8 @@
 
       modules = [
         ./hosts/scv/configuration.nix    
-        inputs.home-manager.nixosModules.default
+        home-manager.nixosModules.default
       ];
     };
-
-
   };
 }

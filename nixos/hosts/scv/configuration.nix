@@ -27,6 +27,7 @@
 		};
 	};
 services.displayManager.sddm.wayland.enable = true;
+services.displayManager.defaultSession="hyprland";
 services.displayManager.sddm.enable = true;
 boot.loader.grub.device =  "nodev" ;
 boot.loader.grub.efiSupport = true;
@@ -38,6 +39,7 @@ time.hardwareClockInLocalTime = true;
 	programs = {
 		hyprland = {
 			enable = true;
+      # package = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.hyprland;
 		};
 
 		xwayland = {
@@ -54,7 +56,17 @@ time.hardwareClockInLocalTime = true;
 	};
 	services.xserver.videoDrivers=["nvidia"];
 
-
+# boot.kernelPackages = pkgs.linuxPackagesFor (pkgs.linux_6_6.override {
+#   argsOverride = rec {
+#     src = pkgs.fetchurl {
+#           url = "mirror://kernel/linux/kernel/v6.x/linux-${version}.tar.xz";
+#           sha256 = "sha256-1DN2yenqqSuxuSYFS9Fg0ynFimLWS9Zf4SIsEcZWT1A=";
+#
+#     };
+#     version = "6.6.47";
+#     modDirVersion = "6.6.47";
+#     };
+# });
 
 # nvidia
 	hardware = {
@@ -66,12 +78,17 @@ time.hardwareClockInLocalTime = true;
 			modesetting.enable = true;
 			open = false;
 			nvidiaSettings = true;
-			package =  config.boot.kernelPackages.nvidiaPackages.stable;
+			package =  config.boot.kernelPackages.nvidiaPackages.production;
 			forceFullCompositionPipeline =true;
 			powerManagement.enable = false;
 		};
 		pulseaudio.enable =true;
 	};
+  # hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.mkDriver{
+  #   version = "550.78";
+  #
+  #
+  # }
 
 
 	networking.hostName = "scv"; # Define your hostname.
