@@ -25,16 +25,16 @@
 
       #-- json like
       # terraform  # install via brew on macOS
-      terraform-ls
-      jsonnet
-      jsonnet-language-server
-      taplo # TOML language server / formatter / validator
-      nodePackages.yaml-language-server
-      actionlint # GitHub Actions linter
+      # terraform-ls
+      # jsonnet
+      # jsonnet-language-server
+      # taplo # TOML language server / formatter / validator
+      # nodePackages.yaml-language-server
+      # actionlint # GitHub Actions linter
 
       #-- dockerfile
-      hadolint # Dockerfile linter
-      nodePackages.dockerfile-language-server-nodejs
+      # hadolint # Dockerfile linter
+      # nodePackages.dockerfile-language-server-nodejs
 
       #-- markdown
       marksman # language server for markdown
@@ -76,13 +76,13 @@
             # debugpy
 
             # my commonly used python packages
-            jupyter
-            ipython
-            pandas
-            requests
-            pyquery
-            pyyaml
-            boto3
+            # jupyter
+            # ipython
+            # pandas
+            # requests
+            # pyquery
+            # pyyaml
+            # boto3
 
             ## emacs's lsp-bridge dependenciesge
             # epc
@@ -103,24 +103,24 @@
       pkgs-unstable.clippy # rust linter
 
       #-- golang
-      go
-      gomodifytags
-      iferr # generate error handling code for go
-      impl # generate function implementation for go
-      gotools # contains tools like: godoc, goimports, etc.
-      gopls # go language server
-      delve # go debugger
+      # go
+      # gomodifytags
+      # iferr # generate error handling code for go
+      # impl # generate function implementation for go
+      # gotools # contains tools like: godoc, goimports, etc.
+      # gopls # go language server
+      # delve # go debugger
 
       # -- java
-      jdk17
-      gradle
-      maven
-      spring-boot-cli
-      jdt-language-server
-
-      #-- zig
-      zls
-
+      # jdk17
+      # gradle
+      # maven
+      # spring-boot-cli
+      # jdt-language-server
+      #
+      # #-- zig
+      # zls
+      #
       #-- lua
       stylua
       lua-language-server

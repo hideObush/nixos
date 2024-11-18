@@ -20,12 +20,12 @@
     bpfmon # BPF based visual packet rate monitor
 
     # system monitoring
-    sysstat
-    iotop
-    iftop
+    # sysstat
+    # iotop
+    # iftop
     btop
     nmon
-    sysbench
+    # sysbench
 
     # system tools
     psmisc # killall/pstree/prtstat/fuser/...

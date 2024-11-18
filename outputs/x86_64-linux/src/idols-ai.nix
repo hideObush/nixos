@@ -14,8 +14,8 @@
   name = "ai";
   base-modules = {
     nixos-modules = map mylib.relativeToRoot [
-      # common
-      "modules/nixos/desktop.nix"
+      # # common
+      # "modules/nixos/desktop.nix"
       # host specific
       "hosts/idols-${name}"
       # nixos hardening

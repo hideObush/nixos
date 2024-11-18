@@ -27,6 +27,11 @@
 
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
+    haumea = {
+      url = "github:nix-community/haumea/v0.2.2";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # home-manager, used for managing user configuration
     home-manager = {
       url = "github:nix-community/home-manager/master";
@@ -73,23 +78,6 @@
 
     nuenv.url = "github:DeterminateSystems/nuenv";
 
-    haumea = {
-      url = "github:nix-community/haumea/v0.2.2";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    nixpak = {
-      url = "github:nixpak/nixpak";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    ########################  Some non-flake repositories  #########################################
-
-    # doom-emacs is a configuration framework for GNU Emacs.
-    doomemacs = {
-      url = "github:doomemacs/doomemacs";
-      flake = false;
-    };
 
     polybar-themes = {
       url = "github:adi1090x/polybar-themes";

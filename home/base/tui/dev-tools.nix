@@ -15,19 +15,13 @@
   #############################################################
 
   home.packages = with pkgs; [
-    colmena # nixos's remote deployment tool
 
     # db related
-    pkgs-unstable.mycli
-    pkgs-unstable.pgcli
-    mongosh
     sqlite
 
     # embedded development
-    minicom
 
     # ai related
-    pkgs-unstable.python312Packages.huggingface-hub # huggingface-cli
 
     # misc
     pkgs-unstable.devbox

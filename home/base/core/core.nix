@@ -28,9 +28,9 @@
     just # a command runner like make, but simpler
     delta # A viewer for git and diff output
     lazygit # Git terminal UI.
-    hyperfine # command-line benchmarking tool
-    gping # ping, but with a graph(TUI)
-    doggo # DNS client for humans
+    # hyperfine # command-line benchmarking tool
+    # gping # ping, but with a graph(TUI)
+    # doggo # DNS client for humans
     duf # Disk Usage/Free Utility - a better 'df' alternative
     du-dust # A more intuitive version of `du` in rust
     gdu # disk usage analyzer(replacement of `du`)
