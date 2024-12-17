@@ -88,15 +88,16 @@ gcroot:
 ############################################################################
 
 [linux]
-[group('desktop')]
-hypr mode="default":
+  [group('desktop')]
+  hypr mode="default":
   #!/usr/bin/env nu
   use {{utils_nu}} *;
   nixos-switch ai-hyprland {{mode}}
 
+
 [linux]
-[group('desktop')]
-s-hypr mode="default":
+  [group('desktop')]
+  s-hypr mode="default":
   #!/usr/bin/env nu
   use {{utils_nu}} *;
   nixos-switch shoukei-hyprland {{mode}}
@@ -111,13 +112,24 @@ s-hypr mode="default":
 
 [group('neovim')]
 nvim-test:
-  rm -rf $"($env.HOME)/.config/nvim"
-  rsync -avz --copy-links --chmod=D2755,F744 home/base/tui/editors/neovim/nvim/ $"($env.HOME)/.config/nvim/"
+  rm -rf $"($env.home)/.config/nvim"
+  rsync -avz --copy-links  home/base/tui/editors/neovim/nvim/ $"($env.home)/.config/nvim/"
+  #rsync -avz --copy-links --chmod=d2755,f744 home/base/tui/editors/neovim/nvim/ $"($env.home)/.config/nvim/"
+
+[group('nushell')]
+nu-test:
+  rm -rf $"($env.home)/.config/nushell/config.nu"
+  rsync -avz --copy-links home/base/core/shells/config.nu $"($env.home)/.config/nushell/"
 
 [group('neovim')]
 nvim-clean:
   rm -rf $"($env.HOME)/.config/nvim"
 
+[group('hyprland')]
+hyprland-test:
+  rm -rf $"($env.HOME)/.config/hyprland"
+  rsync -avz --copy-links --chmod=D2755,F744 home/linux/gui/hyprland/conf/ $"($env.HOME)/.config/hypr/"
+  
 # =================================================
 # Emacs related commands
 # =================================================
